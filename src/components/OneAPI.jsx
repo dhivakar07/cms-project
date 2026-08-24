@@ -33,7 +33,7 @@ function OneAPI() {
     },
   };
   return (
-    <section className="overflow-hidden bg-black px-6 py-24 md:py-32">
+    <section className="overflow-hidden bg-black px-6 py-10 md:py-12">
       <div className="mx-auto w-full max-w-7xl">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

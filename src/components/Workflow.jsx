@@ -68,7 +68,7 @@ function Workflow() {
   };
 
   return (
-    <section className="bg-black px-6 py-24 md:py-32">
+    <section className="bg-black px-6 py-10 md:py-12">
       <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <motion.h2
