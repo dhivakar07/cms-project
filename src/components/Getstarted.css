@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+.gs-sans-display {
+  font-family: "Inter Tight", Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.gs-display {
+  font-family: "Instrument Serif", Georgia, serif;
+}
+
+.gs-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.9rem 1.75rem;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  background: #fff;
+  color: #050505;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.gs-btn-pill:hover {
+  background: #f2f2f2;
+}
+
+.gs-reveal {
+  animation: gs-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes gs-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gs-reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.gs-reveal-scale {
+  animation: gs-reveal-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
