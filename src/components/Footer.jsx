@@ -1,4 +1,5 @@
 import "./Footer.css";
+import "./Getstarted.css";
 
 const columns = [
   {
@@ -39,8 +40,7 @@ function ApertureMark() {
 function Footer() {
   return (
     <footer
-      className="w-full border-t border-white/8 bg-black"
-      style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
+      className="as-inter w-full border-t border-white/8 bg-black"
     >
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-14 md:px-10 md:pt-20 md:pb-16">
         <div className="flex flex-col gap-14 lg:flex-row lg:items-start lg:justify-between">
@@ -51,7 +51,7 @@ function Footer() {
                 Aperture
               </span>
             </a>
-            <p className="mt-5 text-[13px] leading-[1.75] text-neutral-500">
+            <p className="mt-5 text-[13px] leading-relaxed text-white/50">
               A flexible CMS and API platform for modern websites, applications
               and digital experiences.
             </p>
@@ -68,7 +68,7 @@ function Footer() {
                     <li key={link}>
                       <a
                         href="#"
-                        className="text-[13px] leading-snug text-neutral-500 transition-colors hover:text-white"
+                        className="text-[13px] leading-snug text-white/50 transition-colors hover:text-white"
                       >
                         {link}
                       </a>
@@ -82,7 +82,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-white/8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-[11px] text-neutral-500 sm:flex-row sm:items-center sm:justify-between md:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-[11px] text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-10">
           <p>© 2026 Aperture. All rights reserved.</p>
           <div className="flex items-center gap-8 text-[10px] tracking-[0.22em]">
             <a href="#" className="transition-colors hover:text-white">
