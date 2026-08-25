@@ -70,20 +70,17 @@ function Workflow() {
   return (
     <section className="bg-black px-6 py-10 md:py-12">
       <div className="mx-auto w-full max-w-7xl">
-        {/* Heading */}
         <motion.h2
           variants={headingVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="max-w-5xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          className="max-w-5xl text-[30px] font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
           Build without waiting
           <br />
           on <span className="font-serif font-normal italic">developers.</span>
         </motion.h2>
-
-        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -93,7 +90,6 @@ function Workflow() {
         >
           {cards.map((card, i) => {
             const Icon = card.icon;
-
             return (
               <motion.div
                 key={card.number}

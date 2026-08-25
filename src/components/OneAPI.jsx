@@ -43,7 +43,7 @@ function OneAPI() {
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="max-w-5xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+          className="max-w-5xl text-[30px] font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
           One API.{" "}
           <span className="font-serif font-normal italic">

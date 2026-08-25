@@ -24,7 +24,7 @@ function Control() {
         {/* Heading */}
         <div className="translate-y-0 opacity-100 transition-all duration-700 delay-0">
           <h2
-            className="mb-20 max-w-4xl text-[clamp(2.25rem,5vw,4.5rem)] 
+            className="mb-20 max-w-4xl text-[30px] md:text-[clamp(2.25rem,5vw,4.5rem)] 
           font-extrabold leading-[1] tracking-tight"
           >
             Give your team control.{" "}

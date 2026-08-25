@@ -48,7 +48,7 @@ function FAQS() {
         <header>
           <h2
             id="faqs-heading"
-            className="text-[clamp(2.25rem,5vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight"
+            className="text-[30px] md:text-[clamp(2.25rem,5vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight"
           >
             FAQs that stay{" "}
             <span className="as-serif font-normal italic tracking-normal">

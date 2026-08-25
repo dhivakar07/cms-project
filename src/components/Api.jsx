@@ -11,7 +11,7 @@ function Api() {
       <div className="mx-auto w-full max-w-7xl">
         <h2
           id="api-heading"
-          className="max-w-5xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+          className="max-w-5xl text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
         >
           Simple enough for teams.{" "}
           <span className="as-serif font-normal italic tracking-normal">

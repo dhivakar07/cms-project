@@ -47,29 +47,70 @@ function Features() {
   const containerRef = useRef(null);
 
   const [translateX, setTranslateX] = useState(0);
+  const [sectionHeight, setSectionHeight] = useState(900);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const section = sectionRef.current;
+    let ticking = false;
+    const updateLayout = () => {
       const track = trackRef.current;
       const container = containerRef.current;
-      if (!section || !track || !container) return;
-      const rect = section.getBoundingClientRect();
-      const maxScroll = section.offsetHeight - window.innerHeight;
-      if (maxScroll <= 0) return;
-      const scrolled = -rect.top;
-      const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
-      const maxTranslate = track.scrollWidth - container.clientWidth;
-      setTranslateX(-progress * Math.max(maxTranslate, 0));
+      if (!track || !container) return;
+      const maxTranslate = Math.max(
+        track.scrollWidth - container.clientWidth,
+        0,
+      );
+      const animationHeight =
+        window.innerWidth < 768
+          ? Math.max(maxTranslate + 500, window.innerHeight)
+          : Math.max(maxTranslate + window.innerHeight, 1000);
+      setSectionHeight(animationHeight);
     };
+
+    const handleScroll = () => {
+      if (ticking) return;
+      window.requestAnimationFrame(() => {
+        const section = sectionRef.current;
+        const track = trackRef.current;
+        const container = containerRef.current;
+        if (!section || !track || !container) {
+          ticking = false;
+          return;
+        }
+        const rect = section.getBoundingClientRect();
+        const maxScroll = section.offsetHeight - window.innerHeight;
+        if (maxScroll <= 0) {
+          ticking = false;
+          return;
+        }
+        const scrolled = -rect.top;
+        const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+        const maxTranslate = Math.max(
+          track.scrollWidth - container.clientWidth,
+          0,
+        );
+        setTranslateX(-progress * maxTranslate);
+        ticking = false;
+      });
+      ticking = true;
+    };
+    const handleResize = () => {
+      updateLayout();
+      handleScroll();
+    };
+    updateLayout();
     window.addEventListener("scroll", handleScroll, {
       passive: true,
     });
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("resize", handleResize);
+    const timeout = setTimeout(() => {
+      updateLayout();
+      handleScroll();
+    }, 300);
     handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -77,19 +118,20 @@ function Features() {
     <section
       id="features"
       ref={sectionRef}
-      className="relative min-h-[230vh] bg-black"
+      className="relative z-20 bg-black"
+      style={{ height: `${sectionHeight}px` }}
     >
-      <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden py-14 md:py-22">
-        <div className="mx-auto w-full max-w-7xl px-6">
+      <div
+        className=" sticky top-16 flex h-[430px] flex-col justify-start overflow-hidden
+         py-8 sm:h-[500px] sm:py-14 md:top-0 md:h-screen md:justify-center md:py-20"
+      >
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6">
           <motion.h2
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="max-w-5xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className=" max-w-5xl text-[30px] font-black leading-[1.02] tracking-tight text-white sm:text-5xl md:text-7xl "
           >
             Everything the content
             <br />
@@ -98,14 +140,14 @@ function Features() {
         </div>
         <div
           ref={containerRef}
-          className="mt-14 w-full overflow-visible md:mt-16"
+          className=" mt-10 w-full overflow-visible sm:mt-12 md:mt-16 "
         >
           <div
             ref={trackRef}
-            className="flex w-max gap-6 pr-6 md:pr-16"
+            className=" flex w-max gap-4 px-5 sm:gap-5 sm:px-6 md:gap-6 md:px-6 md:pr-16 will-change-transform"
             style={{
               transform: `translate3d(${translateX}px, 0, 0)`,
-              transition: "transform 0.05s linear",
+              transition: "transform 0.06s linear",
             }}
           >
             {features.map((feature) => {
@@ -113,21 +155,26 @@ function Features() {
               return (
                 <div
                   key={feature.title}
-                  className="group w-[300px] shrink-0 rounded-xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 z-20 hover:-translate-y-2 hover:border-white/20 hover:bg-white/[0.05] sm:w-[350px] lg:w-[390px]"
+                  className=" group z-20 w-[285px] shrink-0 rounded-2xl border border-white/10 bg-white/[0.025]
+                    p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:bg-white/[0.05]
+                    sm:w-[340px] sm:p-6 md:w-[390px] "
                 >
-                  <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/[0.08]">
+                  <div
+                    className="mb-6 flex h-11  w-11 items-center justify-center rounded-lg border border-white/10
+                      bg-white/[0.03] transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/[0.08] md:mb-8 "
+                  >
                     <Icon
-                      className="h-5 w-5 text-neutral-300 transition-transform duration-500 group-hover:scale-110 group-hover:text-white"
+                      className=" h-5 w-5 text-neutral-300 transition-transform duration-500 group-hover:scale-110 group-hover:text-white "
                       strokeWidth={1.5}
                     />
                   </div>
                   <h3 className="mb-3 text-lg font-semibold text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-neutral-400">
+                  <p className="text-[14px] leading-relaxed text-neutral-400 sm:text-[15px]">
                     {feature.description}
                   </p>
-                  <div className="mt-8 h-px w-0 bg-white/40 transition-all duration-500 group-hover:w-full" />
+                  <div className=" mt-7 h-px w-0 bg-white/40   transition-all duration-500 group-hover:w-full" />
                 </div>
               );
             })}

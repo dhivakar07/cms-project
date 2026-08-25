@@ -88,7 +88,7 @@ function Personas() {
       <div className="mx-auto w-full max-w-7xl">
         <h2
           id="personas-heading"
-          className="max-w-5xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+          className="max-w-5xl text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
         >
           Built for{" "}
           <span className="as-serif font-normal italic tracking-normal">

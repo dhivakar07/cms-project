@@ -35,7 +35,7 @@ function Security() {
           </p>
           <h2
             id="security-heading"
-            className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+            className="max-w-4xl text-[30px] font-extrabold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
           >
             Secure from CMS
             <br />
@@ -74,7 +74,11 @@ function Security() {
         </ul>
 
         <p className="mt-10 flex flex-wrap items-center justify-center gap-2 text-center text-[13px] leading-relaxed text-white/50 sm:mt-12">
-          <Lock className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} aria-hidden />
+          <Lock
+            className="h-3.5 w-3.5 shrink-0"
+            strokeWidth={1.75}
+            aria-hidden
+          />
           <span>SOC 2 aligned • SSO • Encryption at rest</span>
         </p>
       </div>
