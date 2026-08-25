@@ -94,7 +94,7 @@ function Features() {
         </div>
         <div
           ref={containerRef}
-          className="mt-14 w-full overflow-hidden md:mt-16"
+          className="mt-14 w-full overflow-visible md:mt-16"
         >
           <div
             ref={trackRef}
@@ -109,7 +109,7 @@ function Features() {
               return (
                 <div
                   key={feature.title}
-                  className="group w-[300px] shrink-0 rounded-xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:bg-white/[0.05] sm:w-[350px] lg:w-[390px]"
+                  className="group w-[300px] shrink-0 rounded-xl border border-white/10 bg-white/[0.02] p-6 transition-all duration-500 z-20 hover:-translate-y-2 hover:border-white/20 hover:bg-white/[0.05] sm:w-[350px] lg:w-[390px]"
                 >
                   <div className="mb-8 flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/[0.08]">
                     <Icon
