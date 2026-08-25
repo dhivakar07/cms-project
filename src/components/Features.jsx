@@ -74,7 +74,11 @@ function Features() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[230vh] bg-black">
+    <section
+      id="features"
+      ref={sectionRef}
+      className="relative min-h-[230vh] bg-black"
+    >
       <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden py-14 md:py-22">
         <div className="mx-auto w-full max-w-7xl px-6">
           <motion.h2

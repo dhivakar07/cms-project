@@ -74,7 +74,9 @@ function Api() {
                 <span className="text-neutral-500">, </span>
                 <span className="text-sky-400">&quot;title&quot;</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">&quot;Brand Strategy&quot;</span>
+                <span className="text-amber-300">
+                  &quot;Brand Strategy&quot;
+                </span>
                 {" }"}
                 <span className="text-neutral-500">,</span>
                 {"\n    "}
@@ -85,7 +87,9 @@ function Api() {
                 <span className="text-neutral-500">, </span>
                 <span className="text-sky-400">&quot;title&quot;</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">&quot;Design Systems&quot;</span>
+                <span className="text-amber-300">
+                  &quot;Design Systems&quot;
+                </span>
                 {" }"}
                 <span className="text-neutral-500">,</span>
                 {"\n    "}
@@ -96,7 +100,9 @@ function Api() {
                 <span className="text-neutral-500">, </span>
                 <span className="text-sky-400">&quot;title&quot;</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">&quot;Content Platform&quot;</span>
+                <span className="text-amber-300">
+                  &quot;Content Platform&quot;
+                </span>
                 {" }"}
                 {"\n  "}
                 {"]"}

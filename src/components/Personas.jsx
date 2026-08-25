@@ -59,7 +59,10 @@ function PersonaCard({ icon: Icon, title, description }) {
       onMouseMove={handleMove}
       className="persona-card group relative h-full overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-5 sm:p-6"
     >
-      <div className="persona-card-spot pointer-events-none absolute inset-0" aria-hidden />
+      <div
+        className="persona-card-spot pointer-events-none absolute inset-0"
+        aria-hidden
+      />
       <div className="relative">
         <Icon
           className="mb-4 h-5 w-5 text-white transition-transform duration-300 ease-out group-hover:scale-110 sm:mb-5"
@@ -67,7 +70,9 @@ function PersonaCard({ icon: Icon, title, description }) {
           aria-hidden
         />
         <h3 className="mb-2 text-base font-semibold text-white">{title}</h3>
-        <p className="text-[15px] leading-relaxed text-white/50">{description}</p>
+        <p className="text-[15px] leading-relaxed text-white/50">
+          {description}
+        </p>
       </div>
     </article>
   );
@@ -76,7 +81,7 @@ function PersonaCard({ icon: Icon, title, description }) {
 function Personas() {
   return (
     <section
-      id="personas"
+      id="product"
       aria-labelledby="personas-heading"
       className="as-inter bg-black px-6 py-16 text-white md:py-24"
     >
