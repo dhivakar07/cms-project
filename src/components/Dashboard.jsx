@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   LayoutDashboard,
   FileStack,
@@ -87,11 +88,10 @@ function Dashboard() {
                       key={label}
                       href="#"
                       className={`flex items-center gap-3 px-3 py-2.5 rounded-lg
-                         text-sm transition ${
-                        active
+                         text-sm transition ${active
                           ? "bg-white/10 text-white"
                           : "text-white/50 hover:text-white hover:bg-white/5"
-                      }`}
+                        }`}
                     >
                       <Icon size={16} strokeWidth={2} />
                       {label}
@@ -126,15 +126,24 @@ function Dashboard() {
                       Last 30 days
                     </span>
                   </div>
+                  
                   <div className="flex items-end gap-2 h-24">
                     {chartBars.map((h, i) => (
-                      <div
+                      <motion.div
                         key={i}
                         className="flex-1 rounded bg-white/20"
-                        style={{ height: `${h}%` }}
-                      ></div>
+                        initial={{ height: 0 }}
+                        whileInView={{ height: `${h}%` }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.6,
+                          delay: i * 0.08,
+                          ease: "easeOut",
+                        }}
+                      ></motion.div>
                     ))}
                   </div>
+
                 </div>
 
                 {/* bottom row */}
