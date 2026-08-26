@@ -38,22 +38,23 @@ function Control() {
         <div className="mb-8 grid gap-6 md:grid-cols-2">
           {/* For Teams */}
           <div className="h-full rounded-2xl border border-white/10 p-8">
-            <div className="mb-8 flex items-center gap-3">
+
+            <div className="mb-8 flex flex-col items-start gap-3 md:flex-row md:items-center">
+
               {/* icon */}
-              <div
-                className="flex h-10 w-10 items-center justify-center rounded-lg
-               border border-white/10 bg-white/5"
-              >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center
+               rounded-lg border border-white/10 bg-white/5">
                 <CircleCheck
                   size={18}
                   strokeWidth={2}
                   className="text-white/80"
                 />
               </div>
-              {/* content */}
 
+              {/* content */}
               <div className="flex flex-col">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-white/40">
+                <p className="font-mono text-[10px] uppercase tracking-widest
+                 text-white/40">
                   For teams
                 </p>
 
@@ -76,17 +77,21 @@ function Control() {
 
           {/* For Developers */}
           <div className="h-full rounded-2xl border border-white/10 p-8">
-            <div className="mb-8 flex items-center gap-3">
+
+            <div className="mb-8 flex flex-col items-start gap-3 md:flex-row md:items-center">
+
               {/* icon */}
-              <div
-                className="flex h-10 w-10 items-center justify-center 
-              rounded-lg border border-white/10 bg-white/5"
-              >
-                <Code2 size={18} strokeWidth={2} className="text-white/80" />
+              <div className="flex h-10 w-10 items-center justify-center 
+              rounded-lg border border-white/10 bg-white/5">
+                <Code2
+                  size={18}
+                  strokeWidth={2}
+                  className="text-white/80"
+                />
               </div>
 
               {/* content */}
-              <div className="flex flex-col">
+              <div className="flex flex-col mt-2">
                 <p className="font-mono text-[10px] uppercase tracking-widest text-white/40">
                   For developers
                 </p>

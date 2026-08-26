@@ -6,7 +6,6 @@ function Header() {
     { lable: "Features", href: "#features" },
     { lable: "API", href: "#api" },
     { lable: "Developers", href: "#developers" },
-    { lable: "Pricing", href: "#pricing" },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,7 +74,6 @@ function Header() {
           />
         </button>
       </div>
-      {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
           menuOpen ? "max-h-96 border-t border-white/10" : "max-h-0"

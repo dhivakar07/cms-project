@@ -63,15 +63,15 @@ function Hero() {
             }}
             className="h-1.5 w-1.5 rounded-full bg-white"
           />
-          HEADLESS CMS &times; API PLATFORM
+          MULTI-TENANT SAAS &middot; CMS &times; API
         </motion.div>
         <motion.h1
           variants={itemVariants}
           className="text-[52px] font-extrabold leading-[1.05] tracking-tight text-white sm:text-[64px] md:text-[76px] lg:text-[94px]"
         >
-          Create once.
+          Build content.
           <br />
-          Publish{" "}
+          Ship it{" "}
           <span className="font-serif font-normal italic tracking-normal">
             everywhere.
           </span>
@@ -80,9 +80,9 @@ function Hero() {
           variants={itemVariants}
           className="mt-8 w-full max-w-2xl text-base font-semibold leading-relaxed text-neutral-400 sm:text-lg md:text-xl"
         >
-          The flexible CMS and API layer for modern websites, apps and digital
-          products. Build content and forms in one place, deliver them to every
-          frontend.
+          Create forms, FAQs and content sections from one dashboard, then
+          deliver them through secure, tenant-aware APIs to any website, app or
+          admin panel &mdash; no rebuilding required.
         </motion.p>
         <motion.div
           variants={itemVariants}
@@ -161,7 +161,9 @@ function Hero() {
             className="hidden h-px bg-neutral-700 sm:block"
           />
         </div>
-        <span className="hidden sm:block">API-FIRST &middot; NO SETUP</span>
+        <span className="hidden sm:block">
+          FORMS &middot; FAQS &middot; CONTENT &middot; API
+        </span>
       </motion.div>
     </section>
   );

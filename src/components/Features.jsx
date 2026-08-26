@@ -6,39 +6,39 @@ function Features() {
   const features = [
     {
       icon: FileText,
-      title: "Form API",
+      title: "Form Builder",
       description:
-        "POST submissions straight from any frontend into your CMS with spam filtering built in.",
+        "Create custom forms from the dashboard — add, edit or remove fields, set field types, and mark each one required or optional.",
     },
     {
       icon: Zap,
       title: "Dynamic Content",
       description:
-        "Localised, scheduled and personalised entries served from a single source of truth.",
+        "Manage hero sections, services and testimonials from the CMS. Update the content and it's live on the frontend — no code changes.",
     },
     {
       icon: HelpCircle,
       title: "FAQ Management",
       description:
-        "Group, order and publish FAQ sets that stay in sync across every surface.",
+        "Add, edit, delete, reorder and enable or disable FAQs, then serve the full set through a single API.",
     },
     {
       icon: Copy,
       title: "Multi-Tenant",
       description:
-        "Isolated spaces per brand, client or environment under one account.",
+        "Every company gets its own forms, entries, FAQs and content. Tenants are isolated — no account can see another's data.",
     },
     {
       icon: Lock,
-      title: "Security",
+      title: "API Security",
       description:
-        "Scoped API tokens, audit logs, SSO and encryption at rest by default.",
+        "Authentication, API keys, access permissions, tenant validation and rate limiting protect every request by default.",
     },
     {
       icon: Terminal,
-      title: "Developer DX",
+      title: "Entries Dashboard",
       description:
-        "Typed SDKs, local preview tokens and webhooks that fire on every publish.",
+        "Every submission lands in your dashboard — search, filter, open individual entries, update status, or export the results.",
     },
   ];
 
@@ -61,11 +61,10 @@ function Features() {
       );
       const animationHeight =
         window.innerWidth < 768
-          ? Math.max(maxTranslate + 500, window.innerHeight)
-          : Math.max(maxTranslate + window.innerHeight, 1000);
+          ? Math.max(maxTranslate + 150, window.innerHeight)
+          : Math.max(maxTranslate + window.innerHeight * 0.6, 900);
       setSectionHeight(animationHeight);
     };
-
     const handleScroll = () => {
       if (ticking) return;
       window.requestAnimationFrame(() => {
@@ -122,8 +121,8 @@ function Features() {
       style={{ height: `${sectionHeight}px` }}
     >
       <div
-        className=" sticky top-16 flex h-[430px] flex-col justify-start overflow-hidden
-         py-8 sm:h-[500px] sm:py-14 md:top-0 md:h-screen md:justify-center md:py-20"
+        className=" sticky top-16 flex h-[calc(100vh-4rem)] flex-col justify-center overflow-hidden
+         py-8 sm:py-14 md:top-0 md:h-screen md:justify-center md:py-20"
       >
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-6">
           <motion.h2
@@ -184,5 +183,4 @@ function Features() {
     </section>
   );
 }
-
 export default Features;

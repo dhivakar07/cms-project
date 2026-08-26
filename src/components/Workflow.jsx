@@ -8,21 +8,21 @@ function Workflow() {
       icon: Layers,
       title: "Create",
       description:
-        "Model hero sections, services, FAQs and forms with a visual schema builder — no migrations, no developer queue.",
+        "Build forms, FAQs and content sections like heroes, services and testimonials from the CMS dashboard — add, edit and reorder fields with no code.",
     },
     {
       number: "02",
       icon: SlidersHorizontal,
       title: "Manage",
       description:
-        "Draft, review, version and publish everything from one dashboard with full history and role-based access.",
+        "Review every entry submitted through your APIs, search and filter, update status and control access — each tenant sees only their own data.",
     },
     {
       number: "03",
       icon: Zap,
       title: "Deliver",
       description:
-        "Every entry is instantly available over REST and GraphQL, cached at the edge, ready for any frontend.",
+        "Every form, FAQ and content type is instantly available over a secure API, guarded by authentication, API keys and rate limiting.",
     },
   ];
 
@@ -77,9 +77,9 @@ function Workflow() {
           viewport={{ once: true, amount: 0.3 }}
           className="max-w-5xl text-[30px] font-black leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl"
         >
-          Build without waiting
+          One dashboard.
           <br />
-          on <span className="font-serif font-normal italic">developers.</span>
+          Every <span className="font-serif font-normal italic">frontend.</span>
         </motion.h2>
         <motion.div
           variants={containerVariants}
