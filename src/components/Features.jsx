@@ -179,6 +179,10 @@ function Features() {
             })}
           </div>
         </div>
+
+        <p className="mt-6 px-5 font-mono text-xs uppercase tracking-[0.2em] text-neutral-500 sm:mt-10 sm:px-6">
+          Scroll to explore
+        </p>
       </div>
     </section>
   );
