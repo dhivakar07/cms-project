@@ -17,7 +17,7 @@ function Frontends() {
       title: "Marketing Website",
       description: "Dynamic pages, services, testimonials and FAQs.",
       icon: MonitorSmartphone,
-      details:
+      details:      
         "Build and manage marketing pages with dynamic sections, service listings, customer testimonials, and FAQs — all powered by the same content layer, no rebuild needed for updates.",
     },
     {
@@ -60,8 +60,10 @@ function Frontends() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="mb-20 max-w-4xl font-extrabold 
-          text-[clamp(2.25rem,5vw,4.5rem)] leading-[1] tracking-tight text-white">
+          <h2
+            className="mb-20 max-w-4xl text-[30px] font-extrabold 
+          md:text-[clamp(2.25rem,5vw,4.5rem)] leading-[1] tracking-tight text-white"
+          >
             One source of truth. Every{" "}
             <span className="font-serif font-normal italic tracking-normal">
               digital experience.
@@ -118,8 +120,10 @@ function Frontends() {
                     {frontend.title}
                   </h3>
 
-                  <p className="max-w-[260px] text-base leading-7 text-white/50
-                    transition-colors duration-300 group-hover:text-white/70">
+                  <p
+                    className="max-w-[260px] text-base leading-7 text-white/50
+                    transition-colors duration-300 group-hover:text-white/70"
+                  >
                     {frontend.description}
                   </p>
                 </div>
@@ -164,13 +168,19 @@ function Frontends() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.3 }}
               >
-                <selected.icon size={40} strokeWidth={1.5} className="mb-6 text-white" />
+                <selected.icon
+                  size={40}
+                  strokeWidth={1.5}
+                  className="mb-6 text-white"
+                />
 
                 <h3 className="mb-4 text-2xl font-semibold tracking-tight text-white">
                   {selected.title}
                 </h3>
 
-                <p className="text-base leading-7 text-white/60">{selected.details}</p>
+                <p className="text-base leading-7 text-white/60">
+                  {selected.details}
+                </p>
               </motion.div>
             </motion.div>
           </motion.div>

@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
 function Header() {
-  const navLinks = ["Product", "Features", "API", "Developers", "Pricing"];
+  const navLinks = [
+    { lable: "Product", href: "#product" },
+    { lable: "Features", href: "#features" },
+    { lable: "API", href: "#api" },
+    { lable: "Developers", href: "#developers" },
+    { lable: "Pricing", href: "#pricing" },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,13 +39,13 @@ function Header() {
           Aperture
         </span>
         <nav className="hidden items-center gap-10 text-[15px] text-neutral-300 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.map((item) => (
             <a
-              key={link}
-              href="#"
+              key={item.lable}
+              href={item.href}
               className="transition-colors hover:text-white"
             >
-              {link}
+              {item.lable}
             </a>
           ))}
         </nav>
@@ -76,14 +82,14 @@ function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 px-4 py-4">
-          {navLinks.map((link) => (
+          {navLinks.map((item) => (
             <a
-              key={link}
-              href="#"
+              key={item.lable}
+              href={item.href}
               onClick={() => setMenuOpen(false)}
               className="rounded-lg px-3 py-3 text-[15px] text-neutral-300 transition-colors hover:bg-white/5 hover:text-white"
             >
-              {link}
+              {item.lable}
             </a>
           ))}
           <button className="mt-3 w-full rounded-full bg-white px-6 py-3 text-[15px] font-medium text-black transition-transform hover:scale-[1.02]">
