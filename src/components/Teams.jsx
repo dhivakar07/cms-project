@@ -14,7 +14,6 @@ function Teams() {
                transition-all duration-1000 hover:scale-105"
               src={teams}
             />
-
             <div
               className="absolute bottom-6 left-6 mono text-[10px] 
             uppercase tracking-widest text-white/60"
@@ -22,7 +21,6 @@ function Teams() {
               Team · Aperture Studio
             </div>
           </div>
-
           <div>
             <div
               className="inline-block border border-white/15 
@@ -35,7 +33,6 @@ function Teams() {
                 TEAMS
               </span>
             </div>
-
             <h2
               className="text-[30px] font-extrabold leading-[1.05] tracking-tight 
             md:text-[clamp(2.25rem,5vw,4.5rem)] mb-8"
@@ -47,13 +44,11 @@ function Teams() {
                 stay in control.
               </span>
             </h2>
-
             <p className="text-white/50 text-lg leading-relaxed mb-10 max-w-md">
               Marketing edits copy in the dashboard while engineers own the
               schema, tokens and webhooks. Everyone works on the same content,
               nobody blocks anybody.
             </p>
-
             <div className="flex flex-wrap gap-3">
               <a
                 href="#demo"
@@ -68,7 +63,6 @@ function Teams() {
                   →
                 </span>
               </a>
-
               <a
                 href="#pricing"
                 className="inline-flex items-center justify-center rounded-full 

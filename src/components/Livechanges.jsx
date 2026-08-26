@@ -6,7 +6,7 @@ function Livechanges() {
           {/* Heading */}
           <div className="translate-y-0 opacity-100 delay-[0ms]">
             <h2
-              className="mb-20 max-w-4xl text-[30px] font-extrabold 
+              className="mb-10 max-w-4xl text-[30px] font-extrabold 
              md:text-[clamp(2.25rem,5vw,4.5rem)] leading-[1] tracking-tight text-white"
             >
               Change your content.{" "}
@@ -14,6 +14,15 @@ function Livechanges() {
                 keep your code.
               </span>
             </h2>
+
+           
+
+            <p className="mb-10 max-w-3xl text-justify  text-lg leading-relaxed  text-white/60 md:text-[21px]">
+              Your team can modify content, FAQs, and form configurations from the dashboard.
+              Applications retrieve the latest version through the API, keeping your frontend
+              code separate from your content.
+            </p>
+
           </div>
 
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[2fr_auto_2fr]">

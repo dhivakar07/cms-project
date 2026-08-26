@@ -61,9 +61,9 @@ function OneAPI() {
           }}
           className="mt-8 max-w-3xl text-lg leading-relaxed text-neutral-400 md:text-[21px]"
         >
-          Your content shouldn't be locked inside one frontend. Manage it in one
-          place and let websites, web apps and mobile apps consume the same
-          source of truth.
+          Your forms, FAQs and content shouldn't be locked inside one frontend.
+          Manage them in one dashboard and let any website, app or admin panel
+          read and write to the same source of truth.
         </motion.p>
         <div className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-2">
           <motion.div
@@ -101,7 +101,7 @@ function OneAPI() {
                   </motion.div>
                   <div>
                     <p className="mb-1 font-mono text-[10px] tracking-widest text-neutral-500">
-                      ENDPOINT
+                      CONSUMES
                     </p>
                     <p className="text-[15px] font-semibold text-white">
                       {ep.label}
@@ -143,7 +143,7 @@ function OneAPI() {
               <p>
                 <span className="text-green-400">GET</span>{" "}
                 <span className="text-neutral-300">
-                  /v1/spaces/acme/content/hero
+                  /api/forms/contact-form
                 </span>
               </p>
               <p className="text-neutral-500">
@@ -152,31 +152,50 @@ function OneAPI() {
               </p>
               <p className="mt-4 text-neutral-500">{"{"}</p>
               <p className="pl-4">
+                <span className="text-sky-400">"name"</span>
+                <span className="text-neutral-500">: </span>
+                <span className="text-amber-300">"Contact Form"</span>
+                <span className="text-neutral-500">,</span>
+              </p>
+              <p className="pl-4">
+                <span className="text-sky-400">"fields"</span>
+                <span className="text-neutral-500">: [</span>
+              </p>
+              <p className="pl-8 text-neutral-500">
+                {"{ "}
+                <span className="text-sky-400">"name"</span>
+                <span className="text-neutral-500">: </span>
+                <span className="text-amber-300">"email"</span>
+                <span className="text-neutral-500">, </span>
                 <span className="text-sky-400">"type"</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">"hero"</span>
-                <span className="text-neutral-500">,</span>
-              </p>
-              <p className="pl-4">
-                <span className="text-sky-400">"title"</span>
+                <span className="text-amber-300">"email"</span>
+                <span className="text-neutral-500">, </span>
+                <span className="text-sky-400">"required"</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">
-                  "Create once. Publish everywhere."
-                </span>
-                <span className="text-neutral-500">,</span>
+                <span className="text-purple-400">true</span>
+                {" }"},
               </p>
-              <p className="pl-4">
-                <span className="text-sky-400">"cta"</span>
-                <span className="text-neutral-500">: {"{ "}</span>
-                <span className="text-sky-400">"label"</span>
+              <p className="pl-8 text-neutral-500">
+                {"{ "}
+                <span className="text-sky-400">"name"</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">"Start Building"</span>
-                <span className="text-neutral-500"> {"}"},</span>
+                <span className="text-amber-300">"message"</span>
+                <span className="text-neutral-500">, </span>
+                <span className="text-sky-400">"type"</span>
+                <span className="text-neutral-500">: </span>
+                <span className="text-amber-300">"textarea"</span>
+                <span className="text-neutral-500">, </span>
+                <span className="text-sky-400">"required"</span>
+                <span className="text-neutral-500">: </span>
+                <span className="text-purple-400">true</span>
+                {" }"}
               </p>
+              <p className="pl-4 text-neutral-500">],</p>
               <p className="pl-4">
-                <span className="text-sky-400">"updatedAt"</span>
+                <span className="text-sky-400">"tenant"</span>
                 <span className="text-neutral-500">: </span>
-                <span className="text-amber-300">"2026-08-20T09:14:00Z"</span>
+                <span className="text-amber-300">"acme"</span>
               </p>
               <p className="text-neutral-500">{"}"}</p>
             </div>

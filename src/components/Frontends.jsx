@@ -17,7 +17,7 @@ function Frontends() {
       title: "Marketing Website",
       description: "Dynamic pages, services, testimonials and FAQs.",
       icon: MonitorSmartphone,
-      details:      
+      details:
         "Build and manage marketing pages with dynamic sections, service listings, customer testimonials, and FAQs — all powered by the same content layer, no rebuild needed for updates.",
     },
     {
@@ -61,7 +61,7 @@ function Frontends() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2
-            className="mb-20 max-w-4xl text-[30px] font-extrabold 
+            className="mb-10 max-w-4xl text-[30px] font-extrabold 
           md:text-[clamp(2.25rem,5vw,4.5rem)] leading-[1] tracking-tight text-white"
           >
             One source of truth. Every{" "}
@@ -69,6 +69,13 @@ function Frontends() {
               digital experience.
             </span>
           </h2>
+         
+          <p className="mb-10 max-w-3xl text-justify text-lg leading-relaxed text-white/60 md:text-[21px]">
+            Your CMS becomes the central content layer for websites, React applications,
+            mobile apps, internal tools, and multiple digital properties. Every
+            application retrieves the latest content through the same APIs.
+          </p>
+
         </motion.div>
 
         {/* Cards */}
@@ -177,6 +184,8 @@ function Frontends() {
                 <h3 className="mb-4 text-2xl font-semibold tracking-tight text-white">
                   {selected.title}
                 </h3>
+
+
 
                 <p className="text-base leading-7 text-white/60">
                   {selected.details}

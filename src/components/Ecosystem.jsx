@@ -10,14 +10,14 @@ function Ecosystem() {
     "Vesta",
   ];
   const list = [
-    "FROM BUILDER",
-    "REST + GRAPHQL",
-    "WEBHOOKS",
+    "FORM BUILDER",
+    "FORM API",
+    "FAQ API",
+    "CONTENT API",
     "MULTI-TENANT",
-    "ROLES & ACCESS",
-    "MEDIA LIBRARY",
-    "EDGE DELIVERY",
-    "CONTENT TYPES",
+    "API SECURITY",
+    "RATE LIMITING",
+    "ENTRIES DASHBOARD",
   ];
 
   return (
@@ -37,7 +37,6 @@ function Ecosystem() {
             return <p key={item}>{item}</p>;
           })}
         </div>
-
         <div className="relative mt-10 w-full overflow-hidden">
           <div className="marquee-track flex w-max-7xl whitespace-nowrap">
             {[...list, ...list].map((item, i) => (
