@@ -31,8 +31,8 @@ function Api() {
             </p>
 
             <p className="mb-8 max-w-md text-lg leading-relaxed text-white/50">
-              Typed SDKs, clean REST and GraphQL endpoints. Ship your
-              integration in minutes, not sprints.
+              Publish forms, FAQs and content from the dashboard. Frontends GET
+              that data and POST entries back — REST, both directions.
             </p>
 
             <a

@@ -52,8 +52,8 @@ function Footer() {
               </span>
             </a>
             <p className="mt-5 text-[13px] leading-relaxed text-white/50">
-              A flexible CMS and API platform for modern websites, applications
-              and digital experiences.
+              Create forms, FAQs and content from one dashboard, then deliver
+              them through APIs to any website or app.
             </p>
           </div>
 

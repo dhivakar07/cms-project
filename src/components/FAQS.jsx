@@ -6,22 +6,22 @@ const faqs = [
   {
     question: "What is the platform?",
     answer:
-      "A CMS, form builder and API layer that stores your structured content and exposes it to any frontend.",
+      "A SaaS CMS where you create forms, FAQs and content in the dashboard, then deliver them through APIs to any website, app or admin panel.",
   },
   {
     question: "How does the API work?",
     answer:
-      "Every published entry is available over REST and GraphQL. Authenticate with an API key and query content, forms, FAQs and more from any client.",
+      "GET returns forms, FAQs and content. POST sends form entries back into the CMS. Authenticate with an API key — the same REST APIs work from any client.",
   },
   {
     question: "Can I use it with React?",
     answer:
-      "Yes. Consume the same endpoints from React, Next.js or any JavaScript framework using our typed SDKs or a plain fetch call.",
+      "Yes. Fetch the same REST endpoints from React, Next.js or any JavaScript app to render content and submit entries.",
   },
   {
     question: "Can I use it with mobile apps?",
     answer:
-      "The same API powers iOS, Android and cross-platform apps. One content layer, every surface.",
+      "Yes. Forms and content are not tied to one website. The same APIs power websites, React apps, mobile apps and admin tools.",
   },
   {
     question: "Is there a free tier?",
@@ -56,8 +56,8 @@ function FAQS() {
             </span>
           </h2>
           <p className="mb-16 mt-5 text-lg leading-relaxed text-white/50">
-            Write them once in the dashboard. Every website and app reads them
-            from{" "}
+            Add, edit and reorder them in the dashboard. Every website and app
+            reads them from{" "}
             <code className="mx-0.5 rounded-md bg-white/10 px-2 py-0.5 font-mono text-[13px] text-white/70">
               GET /api/faqs
             </code>

@@ -13,32 +13,38 @@ const personas = [
   {
     icon: Megaphone,
     title: "Marketing Teams",
-    description: "Manage website content without engineering dependency.",
+    description:
+      "Create and update forms, FAQs and content from the dashboard — no engineering queue.",
   },
   {
     icon: Code2,
     title: "Developers",
-    description: "Consume structured data through clean APIs.",
+    description:
+      "GET content and POST form entries through the same REST APIs.",
   },
   {
     icon: Briefcase,
     title: "Agencies",
-    description: "Reuse one content layer across multiple websites.",
+    description:
+      "Reuse the same forms and content APIs across multiple websites.",
   },
   {
     icon: Building2,
     title: "SaaS Companies",
-    description: "Power dynamic product experiences.",
+    description:
+      "Give each customer isolated forms, entries, FAQs and content.",
   },
   {
     icon: Smartphone,
     title: "Mobile Teams",
-    description: "Use the same API for mobile applications.",
+    description:
+      "Use the same APIs for iOS, Android and cross-platform apps.",
   },
   {
     icon: TrendingUp,
     title: "Growing Businesses",
-    description: "Manage multiple tenants securely.",
+    description:
+      "Run multiple tenants on one platform without mixing data.",
   },
 ];
 

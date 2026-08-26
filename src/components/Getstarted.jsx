@@ -54,7 +54,7 @@ function Getstarted() {
       ref={sectionRef}
       id="start"
       aria-labelledby="getstarted-heading"
-      className="as-inter relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden py-32"
+      className="as-inter relative flex w-full items-center justify-center overflow-hidden py-20 md:py-28"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -70,11 +70,11 @@ function Getstarted() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        <p className="gs-reveal mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <p className="gs-reveal mb-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:mb-6 md:gap-x-6">
           {kickerWords.map((word, index) => (
             <span
               key={word}
-              className="gs-sans-display gs-reveal text-[clamp(1.5rem,3vw,3rem)] leading-tight text-white"
+              className="gs-sans-display gs-reveal text-[clamp(1.2rem,2.6vw,2.25rem)] leading-tight text-white"
               style={{ animationDelay: `${index * 120}ms` }}
             >
               {word}
@@ -83,15 +83,15 @@ function Getstarted() {
         </p>
 
         <p
-          className="gs-reveal mx-auto mb-16 max-w-xl text-lg leading-relaxed text-white/50"
+          className="gs-reveal mx-auto mb-7 max-w-xl text-base leading-relaxed text-white/50 md:mb-10 md:text-lg"
           style={{ animationDelay: "300ms" }}
         >
-          Your content layer for the modern web.
+          Create in the dashboard. Deliver through APIs.
         </p>
 
         <h2
           id="getstarted-heading"
-          className="gs-sans-display gs-reveal mb-12 text-[clamp(3rem,8vw,7rem)] leading-[0.95] text-white"
+          className="gs-sans-display gs-reveal mb-9 text-[clamp(2rem,5.2vw,5.5rem)] leading-[1.08] tracking-tight text-white md:mb-10"
           style={{ animationDelay: "400ms" }}
         >
           Your content deserves{" "}
