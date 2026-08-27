@@ -8,13 +8,13 @@ function Features() {
       icon: FileText,
       title: "Form Builder",
       description:
-        "Create custom forms from the dashboard — add, edit or remove fields, set field types, and mark each one required or optional.",
+        "Create custom forms from the dashboard add, edit or remove fields, set field types, and mark each one required or optional.",
     },
     {
       icon: Zap,
       title: "Dynamic Content",
       description:
-        "Manage hero sections, services and testimonials from the CMS. Update the content and it's live on the frontend — no code changes.",
+        "Manage hero sections, services and testimonials from the CMS. Update the content and it's live on the frontend no code changes.",
     },
     {
       icon: HelpCircle,
@@ -26,7 +26,7 @@ function Features() {
       icon: Copy,
       title: "Multi-Tenant",
       description:
-        "Every company gets its own forms, entries, FAQs and content. Tenants are isolated — no account can see another's data.",
+        "Every company gets its own forms, entries, FAQs and content. Tenants are isolated no account can see another's data.",
     },
     {
       icon: Lock,
@@ -38,7 +38,7 @@ function Features() {
       icon: Terminal,
       title: "Entries Dashboard",
       description:
-        "Every submission lands in your dashboard — search, filter, open individual entries, update status, or export the results.",
+        "Every submission lands in your dashboard search, filter, open individual entries, update status, or export the results.",
     },
   ];
 

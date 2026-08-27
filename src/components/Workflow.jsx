@@ -8,14 +8,14 @@ function Workflow() {
       icon: Layers,
       title: "Create",
       description:
-        "Build forms, FAQs and content sections like heroes, services and testimonials from the CMS dashboard — add, edit and reorder fields with no code.",
+        "Build forms, FAQs and content sections like heroes, services and testimonials from the CMS dashboard add, edit and reorder fields with no code.",
     },
     {
       number: "02",
       icon: SlidersHorizontal,
       title: "Manage",
       description:
-        "Review every entry submitted through your APIs, search and filter, update status and control access — each tenant sees only their own data.",
+        "Review every entry submitted through your APIs, search and filter, update status and control access each tenant sees only their own data.",
     },
     {
       number: "03",
